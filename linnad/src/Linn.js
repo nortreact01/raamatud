@@ -1,9 +1,9 @@
-function Linn(props) {
+function Linn({nimi, pildiAadress}) {
     return (
         <div className="linn-rida">
-            <img className="linn-rida__img" src={props.pildiAadress} alt={props.nimi} />
+            <img className="linn-rida__img" src={pildiAadress} alt={nimi} />
             <div className="linn-rida__nimi">
-                Linn: {props.nimi}
+                Linn: {nimi}
             </div>
         </div>
     )

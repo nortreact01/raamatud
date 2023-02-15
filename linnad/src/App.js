@@ -6,12 +6,29 @@ import londonImg from './pildid/london.jpg'
 import pariisImg from './pildid/pariis.png'
 
 function App() {
+  const linnad = [
+    { nimi: "London", pildiAadress: londonImg },
+    { nimi: "Pariis", pildiAadress: pariisImg },
+    { nimi: "Berliin", pildiAadress: berliinImg },
+    { nimi: "Tallinn", pildiAadress: berliinImg },
+  ]
+
+
+  const klikkLisaLinn = () => {
+    console.log('Klikiti nupul')
+  }
   return (
     <div className="App">
       <h1>Linnad</h1>
-      <Linn nimi="London" pildiAadress={londonImg} />
-      <Linn nimi="Pariis" pildiAadress={pariisImg} />
-      <Linn nimi="Berliin"pildiAadress={berliinImg} />
+      {linnad.map((linn, index) => {
+        return <Linn key={index} nimi={linn.nimi} pildiAadress={linn.pildiAadress}  />
+      })}
+      <div>
+        <h2>Milliseid linu sina tahaksid külastada?</h2>
+        <div>
+          <button onClick={klikkLisaLinn} type='button'>Lisa linn</button>
+        </div>
+      </div>
     </div>
   );
 }
