@@ -1,0 +1,15 @@
+.linn-rida {
+  display: flex;
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
+
+.linn-rida__img {
+  width: 40%;
+}
+
+.linn-rida__nimi {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
