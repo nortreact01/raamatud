@@ -17,11 +17,20 @@ function App() {
   const klikkLisaLinn = () => {
     console.log('Klikiti nupul')
   }
+  
+  //Alternatiiv mapile:
+  //let linnadList = []
+  //for (let i = 0; i < linnad.length; i++) {
+  //  let linn = linnad[i];
+  //  let linnJsx = <Linn  nimi={linn.nimi} pildiAadress={linn.pildiAadress} />
+  //  linnadList.push( linnJsx )
+  //}
+
   return (
     <div className="App">
       <h1>Linnad</h1>
-      {linnad.map((linn, index) => {
-        return <Linn key={index} nimi={linn.nimi} pildiAadress={linn.pildiAadress}  />
+      {linnad.map((linn, i) => {
+        return <Linn key = {i} nimi={linn.nimi} pildiAadress={linn.pildiAadress}  />
       })}
       <div>
         <h2>Milliseid linu sina tahaksid külastada?</h2>
