@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import './App.css';
+import IlmaAndmed from './IlmaAndmed';
 import ToodeteNimekiri from './ToodeteNimekiri';
 import UusAsi from './UusAsi';
 
@@ -24,6 +25,7 @@ function App() {
         <h1>Poenimekiri</h1>
         <UusAsi lisaOst={lisaOst} />
         <ToodeteNimekiri  ostunimekiri={ostunimekiri}/>
+        <IlmaAndmed />
     </div>
   );
 }
