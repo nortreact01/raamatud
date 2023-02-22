@@ -9,13 +9,14 @@ function UusAsi({lisaOst}) {
     const handleClick = () => {
         console.log('Vaja lisada uus toode: ' + toode)
         lisaOst(toode, 1)
+        setToode('')
     }
 
     return (
         <div>
             <label>
                 Toode:
-                <input onChange={handleChange} />
+                <input value={toode} onChange={handleChange} />
             </label>
             <button onClick={handleClick}>Lisa toode</button>
         </div>

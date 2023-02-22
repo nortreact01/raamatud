@@ -4,11 +4,7 @@ import ToodeteNimekiri from './ToodeteNimekiri';
 import UusAsi from './UusAsi';
 
 function App() {
-  const [ostunimekiri, setOstunimekiri] = useState([
-    {nimetus: 'kartul (kg)', kasKorvis: false, kogus: 1},
-    {nimetus: 'leib (tk)', kasKorvis: false, kogus: 1},
-    {nimetus: 'piim (liitrit)', kasKorvis: false, kogus: 1}
-  ])
+  const [ostunimekiri, setOstunimekiri] = useState([])
 
   const lisaOst = (nimetus, kogus) => {
     const uusToode = {
